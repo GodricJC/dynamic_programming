@@ -9,6 +9,7 @@ using std::ostream;
 
 namespace JC
 {
+	class MatrixChainSolver;
 	class Matrix
 	{
 	public:
@@ -37,6 +38,7 @@ namespace JC
 		Matrix& operator*=(const Matrix& rhs);
 		friend Matrix operator*(const Matrix& lhs, const Matrix& rhs);
 		friend ostream& operator<<(ostream& out, const Matrix& m);
+		friend class MatrixChainSolver;
 
 	private:
 		void swap(Matrix& other);
