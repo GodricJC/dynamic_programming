@@ -16,6 +16,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
+    <Text Include="关于动态规划原理.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -33,6 +34,9 @@
     <ClInclude Include="matrix_chain.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="optimal_search_tree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -48,6 +52,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="matrix_chain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="optimal_search_tree.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

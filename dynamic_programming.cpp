@@ -3,6 +3,7 @@
 #include "BarCutting.h"
 #include "matrix.h"
 #include "matrix_chain.h"
+#include "optimal_search_tree.h"
 #include <iostream>
 
 using namespace JC;
@@ -42,17 +43,25 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Matrix mc = ma*mb;
 	//cout << mc << endl;
 	//system("pause");
-	vector<shared_ptr<Matrix>> ms;
-	ms.push_back(shared_ptr<Matrix>(new Matrix(30, 35)));
-	ms.push_back(shared_ptr<Matrix>(new Matrix(35, 15)));
-	ms.push_back(shared_ptr<Matrix>(new Matrix(15, 5)));
-	ms.push_back(shared_ptr<Matrix>(new Matrix(5, 10)));
-	ms.push_back(shared_ptr<Matrix>(new Matrix(10, 20)));
-	ms.push_back(shared_ptr<Matrix>(new Matrix(20, 25)));
-	MatrixChainSolver mcs(ms);
-	string format;
-	cout << mcs.solve(format) << endl;
-	cout << format << endl;
+	//vector<shared_ptr<Matrix>> ms;
+	//ms.push_back(shared_ptr<Matrix>(new Matrix(30, 35)));
+	//ms.push_back(shared_ptr<Matrix>(new Matrix(35, 15)));
+	//ms.push_back(shared_ptr<Matrix>(new Matrix(15, 5)));
+	//ms.push_back(shared_ptr<Matrix>(new Matrix(5, 10)));
+	//ms.push_back(shared_ptr<Matrix>(new Matrix(10, 20)));
+	//ms.push_back(shared_ptr<Matrix>(new Matrix(20, 25)));
+	//MatrixChainSolver mcs(ms);
+	//string format;
+	//cout << mcs.solve(format) << endl;
+	//cout << format << endl;
+
+	// 最优二叉树问题测试
+	vector<double> words{ .15, .1, .05, .1, .2 };
+	vector<double> extra{ .05, .1, .05, .05, .05, .1 };
+	OptimalSearchTreeSolver osts(words, extra);
+	string str;
+	cout << osts.solve(str) << endl;
+	cout << str << endl;
 
 	system("pause");
 	return 0;
